@@ -1,1 +1,1 @@
-select * from transactions;
+select * from Stores;
