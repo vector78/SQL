@@ -17,9 +17,8 @@ where b.RefundReason is not null;
 
 SELECT * FROM RefundCustomers;
 
-
-select a.Username,a.FirstName, a.LastName, b.RefundReason 
+Create View TrackingInfo as
+select a.Amount ,a.TrackingNumber, b.CourierName 
 from Transactions as a
 left join Courier as b
-on a.COURIERID = b.COURIERID 
-where b.RefundReason is not null;
+on a.COURIERID = b.COURIERID;
