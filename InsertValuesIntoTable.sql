@@ -1,14 +1,14 @@
---INSERT INTO Users VALUES
---    ('1056', 'musiclover59', 'Barbara', 'Fields', 'barbarafields59@yahoo.com'),
---    ('1057', 'guitarguy54', 'Mike', 'Hunt', 'michaelguitar54@gmail.com'),
---    ('1058', 'ocarinagal23', 'Bethany', 'Richards', 'beth4theocarina@aol.com'),
---    ('1059', 'uprightbassist11', 'Richard', 'Telco', 'telcoplaysbass@uab.edu'),
---    ('1060', 'summerdreams88', 'Summer', 'Krywanski', 'summerkry66@yahoo.com'),
---    ('1061', 'hellotheremusic55', 'Kevin', 'Dean', 'kevindean@uabmc.edu'),
---    ('1062', 'keyboardguy4', 'John', 'Lawley', 'lawley56@uab.edu'),
---    ('1063', 'wonderwall65', 'Oliver', 'Queen','queenshere4u@aol.com'),
---    ('1064', 'nineinchnailsfan', 'Barbara', 'Fields', 'barbarafields59@yahoo.com'),
---    ('1065', 'heymrDJ33', 'DJ', 'Sparks', 'sparksfly69@gmail.com');
+INSERT INTO Users VALUES
+    ('1056', 'musiclover59', 'Barbara', 'Fields', 'barbarafields59@yahoo.com'),
+    ('1057', 'guitarguy54', 'Mike', 'Hunt', 'michaelguitar54@gmail.com'),
+    ('1058', 'ocarinagal23', 'Bethany', 'Richards', 'beth4theocarina@aol.com'),
+    ('1059', 'uprightbassist11', 'Richard', 'Telco', 'telcoplaysbass@uab.edu'),
+    ('1060', 'summerdreams88', 'Summer', 'Krywanski', 'summerkry66@yahoo.com'),
+    ('1061', 'hellotheremusic55', 'Kevin', 'Dean', 'kevindean@uabmc.edu'),
+    ('1062', 'keyboardguy4', 'John', 'Lawley', 'lawley56@uab.edu'),
+    ('1063', 'wonderwall65', 'Oliver', 'Queen','queenshere4u@aol.com'),
+    ('1064', 'nineinchnailsfan', 'Barbara', 'Fields', 'barbarafields59@yahoo.com'),
+    ('1065', 'heymrDJ33', 'DJ', 'Sparks', 'sparksfly69@gmail.com');
 
 INSERT INTO Transactions VALUES
 ('345', 10.56, 'Credit', '1SW78'),
@@ -22,3 +22,26 @@ INSERT INTO Transactions VALUES
 ('353', 100.45, 'Debit', '1557788'),
 ('354', 453.22, 'Paypal', '234WWEEY');
     
+INSERT INTO Product VALUES
+('433', 45.00, 'Acoustic-electric Travel Guitar', 'Travel Sized Acoustic Guitar','Taylor Instrument'),
+('233', 240.56, '12-Hole Ceramic Ocarina', 'Small, blue ocarina','WoodWind Inc'),
+('7533', 3400.00, 'Double Upright Bass', 'Wooden upright bass with steel strings','UprightNow'),
+('10054', 545.00, 'PSR-F51', '61-Key Portable Keyboard','Yamaha'),
+('9008', 7800.00, 'RA 067 Dreadnought', 'Baby Grand Piano 88 keys','Rogue'),
+('2446', 400.55, '45 Limited', 'Nylon String Guitar extra strings','Cordoba'),
+('88776', 456.99, 'SynthWave Unlimited 55', 'Synthesizer full sized','DAngelo'),
+('5443', 125.99,'SlapMaster 60000','4 string electric bass with stand','Rogue'),
+('9887', 500.34, 'Rockabilly Tune 44', 'Lee Rocker favorite guitar','Gibson'),
+('2334', 35.00, '12-string Steel Strings', 'Set of steel strings for a 12-string steel','Epiphone');
+
+INSERT INTO Stores VALUES
+('244', 45.00, 'Acoustic-electric Travel Guitar', 'Travel Sized Acoustic Guitar','Taylor Instrument'),
+('245', 240.56, '12-Hole Ceramic Ocarina', 'Small, blue ocarina','WoodWind Inc'),
+('246', 3400.00, 'Double Upright Bass', 'Wooden upright bass with steel strings','UprightNow'),
+('247', 545.00, 'PSR-F51', '61-Key Portable Keyboard','Yamaha'),
+('248', 7800.00, 'RA 067 Dreadnought', 'Baby Grand Piano 88 keys','Rogue'),
+('249', 400.55, '45 Limited', 'Nylon String Guitar extra strings','Cordoba'),
+('250', 456.99, 'SynthWave Unlimited 55', 'Synthesizer full sized','DAngelo'),
+('256', 125.99,'SlapMaster 60000','4 string electric bass with stand','Rogue'),
+('288', 500.34, 'Rockabilly Tune 44', 'Lee Rocker favorite guitar','Gibson'),
+('300', 35.00, '12-string Steel Strings', 'Set of steel strings for a 12-string steel','Epiphone');
