@@ -1,7 +1,9 @@
 
 
-DROP SCHEMA music_shop2 CASCADE;
-CREATE SCHEMA music_shop2;
+--DROP SCHEMA music_shop2 CASCADE;
+--CREATE SCHEMA music_shop2;
+
+set schema 'music_shop2';
 
 CREATE TABLE Courier (
    CourierID varchar(100) NOT NULL PRIMARY KEY,
