@@ -4,7 +4,7 @@ select * from Courier;
 
 select * from Store;
 
-select * from users;
+select * from Customers;
 
 select * from Transactions;
 
@@ -16,7 +16,11 @@ select * from Ocarina;
 
 select * from refundedtransactions;
 
+
+
 select * from customeraddressinfo
+
+
 
 select * from creditcardinfo
 
