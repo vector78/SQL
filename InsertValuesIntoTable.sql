@@ -14,25 +14,44 @@ INSERT INTO  Courier VALUES
 
 
 
-INSERT INTO Users VALUES
-    ('1056', 'musiclover59', 'Barbara', 'Fields', 'barbarafields59@yahoo.com'),
-    ('1057', 'guitarguy54', 'Mike', 'Hunt', 'michaelguitar54@gmail.com'),
-    ('1058', 'ocarinagal23', 'Bethany', 'Richards', 'beth4theocarina@aol.com'),
-    ('1059', 'uprightbassist11', 'Richard', 'Telco', 'telcoplaysbass@uab.edu'),
-    ('1060', 'summerdreams88', 'Summer', 'Krywanski', 'summerkry66@yahoo.com'),
-    ('1061', 'hellotheremusic55', 'Kevin', 'Dean', 'kevindean@uabmc.edu'),
-    ('1062', 'keyboardguy4', 'John', 'Osborne', 'josborne@uabmc.edu'),
-    ('1063', 'wonderwall65', 'Oliver', 'Queen','queenshere4u@aol.com'),
-    ('1064', 'nineinchnailsfan', 'Barbara', 'Fields', 'barbarafields59@yahoo.com'),
-    ('1065', 'heymrDJ33', 'DJ', 'Sparks', 'sparksfly69@gmail.com'),
-    ('5433', 'guitarist45', 'Greg', 'Biddle', 'gregbiddle@yahoo.com'),
-    ('1977', 'slapthebass88', 'Michael', 'Kroger', 'michaelkroger@gmail.com'),
-    ('4322', 'dontfret99', 'Roger', 'Little', 'rogerlittle@aol.com'),
-    ('5533', 'notreble11', 'Missy', 'White', 'whitemissy55@uab.edu'),
-    ('1054', 'thumbthebase55', 'Jessica', 'Jones', 'jessicajones65@yahoo.com'),
-    ('7766', 'helloitskevin33', 'Kevin', 'Mike', 'kevinm88@uabmc.edu');
+INSERT INTO Customers values
+ ('1056', 'Barbara', 'Fields', 'barbarafields59@yahoo.com'),
+    ('1057', 'Mike', 'Hunt', 'michaelguitar54@gmail.com'),
+    ('1058', 'Bethany', 'Richards', 'beth4theocarina@aol.com'),
+    ('1059', 'Richard', 'Telco', 'telcoplaysbass@uab.edu'),
+    ('1060', 'Summer', 'Krywanski', 'summerkry66@yahoo.com'),
+    ('1061', 'Kevin', 'Dean', 'kevindean@uabmc.edu'),
+    ('1062', 'John', 'Osborne', 'josborne@uabmc.edu'),
+    ('1063', 'Oliver', 'Queen','queenshere4u@aol.com'),
+    ('1064', 'Barbara', 'Fields', 'barbarafields59@yahoo.com'),
+    ('1065', 'DJ', 'Sparks', 'sparksfly69@gmail.com'),
+    ('5433', 'Greg', 'Biddle', 'gregbiddle@yahoo.com'),
+    ('1977', 'Michael', 'Kroger', 'michaelkroger@gmail.com'),
+    ('4322', 'Roger', 'Little', 'rogerlittle@aol.com'),
+    ('5533', 'Missy', 'White', 'whitemissy55@uab.edu'),
+    ('1054', 'Jessica', 'Jones', 'jessicajones65@yahoo.com'),
+    ('7766', 'Kevin', 'Mike', 'kevinm88@uabmc.edu');
+   
+  INSERT INTO CredentialsSignIn values
+    ('4562', 'musiclover59','09:10:00','sep48128','1056'),
+    ('4514', 'guitarguy54', '10:10:00','abs123','1057'),
+    ('8516', 'ocarinagal23','12:10:07','chillystreet675','1058'),
+    ('1831', 'uprightbassist11','05:04:20','doggo56' ,'1059'),
+    ('7825', 'summerdreams88', '02:01:39','!yu32','1060'),
+    ('7839', 'hellotheremusic55','08:27:54','nices90','1061'),
+    ('6741', 'keyboardguy4', '10:23:18','password123','1062'),
+    ('7816', 'wonderwall65','11:57:07','intermacs50','1063'),
+    ('8901', 'nineinchnailsfan','05:09:00','f15067','1064'),
+    ('7834', 'heymrDJ33','07:30:27','timing78','1065'),
+    ('1225', 'guitarist45', '05:03:05','wsxedcrfv','5433'),
+    ('8990', 'slapthebass88', '02:01:53','ujqwer','1977'),
+    ('1250', 'dontfret99','01:01:00','123qazwsx','4322'),
+    ('1672', 'notreble11','02:16:32','mombirthday59','5533'),
+    ('9054', 'thumbthebase55','09:37:38','pikachu89','1054'),
+    ('8912', 'helloitskevin33','09:10:00','greengrass345','7766');
    
 
+   
    
 INSERT INTO Store VALUES
 ('1', '344-566-2345', 'wangbangsweetmusicthang1@yahoo.com','Portland, Oregon'),
@@ -78,16 +97,15 @@ INSERT INTO Ocarina VALUES
 ('233', 'Double Octave Wooden Ocarina', 'WindMasters');
 
 INSERT INTO  RefundedTransactions VALUES
-('156', '347', '600.78','Broken Neck','1056'),
-('677', '354', '453.22','Dented Head','1057'),
-('988', '352', '99.23','Broken Strings','1064'),
-('432', '111', '100.45','Chipped Wood','1054'),
-('644','988', '56.78','Damaged during shippment','5433'),
-('234', '0099', '90.67','Missing frets','1977'),
-('987', '7766', '34.56','Missing tuning peg','4322'),
-('098', '4567','23.45','Wrong strings','5533'),
-('100','66554', '34.56','Wrong strings','1065'),
-('204', '122', '87.98','Chipped during shipment','4533');
+('156', '600.78','Broken Neck','1056'),
+('677', '453.22','Dented Head','1057'),
+('988', '99.23','Broken Strings','1064'),
+('432', '100.45','Chipped Wood Around Frets','1054'),
+('234', '90.67','Product not of good quality','1977'),
+('987', '34.56','Missing tuning pegs','4322'),
+('098', '23.45','Broken fret boards','5533'),
+('100','34.56','Wrong Rosin','1065');
+
 
 
 INSERT INTO  CustomerAddressInfo VALUES

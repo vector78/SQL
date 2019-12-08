@@ -1,7 +1,7 @@
 
 
---DROP SCHEMA music_shop2 CASCADE;
---CREATE SCHEMA music_shop2;
+DROP SCHEMA music_shop2 CASCADE;
+CREATE SCHEMA music_shop2;
 
 CREATE TABLE Courier (
    CourierID varchar(100) NOT NULL PRIMARY KEY,
@@ -18,79 +18,98 @@ CREATE TABLE Store (
    Location varchar(100)
   );
   
-CREATE TABLE Users (
-   UserID varchar(100) NOT NULL PRIMARY KEY,
-   UserName varchar(100),
-   FirstName varchar(100),
-   LastName varchar(100),
+CREATE TABLE Customers (
+   CustomerID varchar(100) NOT NULL PRIMARY KEY,
+   FirstName varchar(100) NOT NULL,
+   LastName varchar(100) NOT NULL,
    Email varchar(100)
+  );
+ 
+
+ CREATE TABLE CredentialsSignIn (
+   LogID varchar(100) NOT NULL PRIMARY KEY,
+   UserName varchar(100) UNIQUE,
+   LogTime time,
+   UserPassword varchar(100),
+   CustomerID varchar(100),
+   FOREIGN key (CustomerID) references Customers(CustomerID)
   );
    
 
 CREATE TABLE Transactions (
    PurchaseID varchar(100) NOT NULL PRIMARY KEY,
-   Amount float,
+   Amount float CONSTRAINT positive_amount CHECK (Amount > 0),
    PaymentType varchar(100),
-   TrackingNumber varchar(100),
-   UserID varchar(100) references Users(UserID),
-   CourierID varchar(100) references Courier(CourierID)
+   TrackingNumber varchar(100) UNIQUE,
+   CustomerID varchar(100),
+   CourierID varchar(100),
+   FOREIGN key (CustomerID) references Customers(CustomerID),
+   FOREIGN key (CourierID) references Courier(CourierID)
   );
 
 CREATE TABLE Product (
    ProductID varchar(100) NOT NULL PRIMARY KEY,
-   Price float,
+   Price float CONSTRAINT positive_price CHECK (Price > 0),
    Name varchar(100),
-   StoreID varchar(100) references Store(StoreID)
+   StoreID varchar(100),
+   FOREIGN key (StoreID) references Store(StoreID)
    );
   
 CREATE TABLE UprightBass (
-   ProductID varchar(100) references Product(ProductID),
+   ProductID varchar(100),
+   FOREIGN key (ProductID) references Product(ProductID),
    Description varchar(100),
    Manufacturer varchar(100)
    );
 
 CREATE TABLE Ocarina (
-   ProductID varchar(100) references Product(ProductID),
+   ProductID varchar(100),
+   FOREIGN key (ProductID) references Product(ProductID),
    Description varchar(100),
    Manufacturer varchar(100)
    );
 
+  
 CREATE TABLE RefundedTransactions (
    RefundID varchar(100) NOT NULL PRIMARY KEY,
-   OriginalPurchaseID varchar(100),
-   RefundAmount float,
+   RefundAmount float CONSTRAINT Refunded CHECK (RefundAmount  > 0),
    RefundReason varchar(100),
-   UserID varchar(100) 
+   CustomerID varchar(100),
+   FOREIGN key (CustomerID) references Customers(CustomerID)
    );
-   
+
 CREATE TABLE CustomerAddressInfo (
-   Address varchar(100),
-   City varchar(100),
-   Zip int,
+   Address varchar(100) NOT NULL,
+   City varchar(100) NOT NULL,
+   Zip varchar(100) NOT NULL,
    State varchar(100),
    PRIMARY KEY (Address, City,Zip),
-   UserID varchar(100) references Users(UserID
+   CustomerID varchar(100),
+   FOREIGN key (CustomerID) references Customers(CustomerID)
    );
  
   
 CREATE TABLE CreditCardInfo (
    CardNumber varchar(100) NOT NULL PRIMARY KEY,
-   ExpDate date,
-   UserID varchar(100) references Users(UserID)
+   ExpDate date CONSTRAINT date_check CHECK (ExpDate > current_date - 1),
+   CustomerID varchar(100),
+   FOREIGN key (CustomerID) references Customers(CustomerID)
    );
   
 CREATE TABLE Employees (
 	EmpID varchar(100) NOT NULL PRIMARY KEY,
 	EmpFirstName varchar(100),
 	EmpLastName varchar(100),
-	StoreID varchar(100) references Store(StoreID)  
+	StoreID varchar(100),
+	FOREIGN key (StoreID) references Store(StoreID)  
 	);
 	
 CREATE TABLE Salary (
 	AccountID varchar(100) NOT NULL PRIMARY KEY,
-	EmpID varchar(100) references Employees(EmpID),
-	EmpSalary int,
-	EmpYears int ,
+	EmpID varchar(100),
+	FOREIGN key (EmpID) references Employees(EmpID),
+	EmpSalary int CONSTRAINT Salary CHECK (EmpSalary  > 0),
+	EmpYears int CONSTRAINT Years CHECK (EmpYears  > 0),
 	EmpDOB date 
 	   );
 	
