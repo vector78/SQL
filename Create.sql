@@ -27,6 +27,11 @@ CREATE TABLE Customers (
    Email varchar(100)
   );
  
+CREATE TABLE CustomerAudits (
+   CustomerID varchar(100) NOT NULL PRIMARY KEY,
+   LastName VARCHAR(40) NOT NULL,
+   TimeChanged TIMESTAMP(6) NOT NULL
+)
 
  CREATE TABLE CredentialsSignIn (
    LogID varchar(100) NOT NULL PRIMARY KEY,
