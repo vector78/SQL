@@ -1,16 +1,16 @@
 set schema 'music_shop2';
 
-INSERT INTO  Courier VALUES
-('1500', 'Fed-Ex','Doug', 'Jones', '455-678-9867'),
-('6755', 'UPS','Bernie','Yards', '429-675-9864'),
-('0998', 'Fed-Ex','Mia', 'Ham', '321-332-8765'),
-('FGH67', 'UPS','Ross', 'Bridges', '459-321-7654'),
-('45RT','Fed-Ex','Dominique','Gillo', '988-543-6655'),
-('99YY', 'UPS','Rose','Fields', '344-988-5444'),
-('22RR', 'UPS','Asma', 'Khan', '455-544-3421'),
-('7756R', 'Fed-Ex','Jason','Bridges','657-655-9821'),
-('123PP','UPS','Sally','Jones', '455-678-9867'),
-('9944R', 'Fed-Ex','Tobias','Jam', '433-998-2334');
+INSERT INTO  Courier (CourierName, DriverFirstName, DriverLastName, DriverPhoneNumber)
+('Fed-Ex','Doug', 'Jones', '455-678-9867'),
+('UPS','Bernie','Yards', '429-675-9864'),
+('Fed-Ex','Mia', 'Ham', '321-332-8765'),
+('UPS','Ross', 'Bridges', '459-321-7654'),
+('Fed-Ex','Dominique','Gillo', '988-543-6655'),
+('UPS','Rose','Fields', '344-988-5444'),
+('UPS','Asma', 'Khan', '455-544-3421'),
+('Fed-Ex','Jason','Bridges','657-655-9821'),
+('UPS','Sally','Jones', '455-678-9867'),
+('Fed-Ex','Tobias','Jam', '433-998-2334');
 
 
 
