@@ -54,13 +54,6 @@ WHERE AccountID = '7843A';
  
 select * from SalaryHistory;
  
-CREATE TABLE UprightBass (
-   ProductID varchar(100),
-   FOREIGN key (ProductID) references Product(ProductID),
-   Description varchar(100),
-   Manufacturer varchar(100)
-   );
-
 
 --CREATE PROCEDURE InsertMusicTable(ProductID varchar(100), Description varchar(100), Manufacturer varchar(100))
 --LANGUAGE SQL
@@ -68,31 +61,25 @@ CREATE TABLE UprightBass (
 --    INSERT INTO UprightBass(ProductID, Description, Manufacturer)
 --    VALUES(ProductID, Description, Manufacturer);   
 --$BODY$;
---
---CREATE OR REPLACE FUNCTION t2t2_f ()
---RETURNS TRIGGER
---AS
---$$
---BEGIN
---  INSERT INTO UprightBass
---              (ProductID,
---              Description,
---              VALUES (NEW.column_1,
---                      ...,
---                      NEW.column_n);
---
---  RETURN NEW;
---END;
---$$
---LANGUAGE plpgsql;
 
-CREATE FUNCTION password_changed() RETURNS TRIGGER
+CREATE FUNCTION passwordchange() RETURNS TRIGGER
     LANGUAGE plpgsql
     AS $$
 BEGIN
   IF NEW.UserPassword != OLD.UserPassword THEN
-    NEW.LogTime := current_date;
+    NEW.LogTime := CURRENT_TIME;
+ 	RAISE NOTICE 'Password changed for user ''%'' on %', OLD.UserName, NEW.LogTime;
   END IF;
   RETURN NEW;
 END;
 $$;
+
+CREATE TRIGGER password_changed
+  BEFORE UPDATE ON CredentialsSignIn
+  FOR EACH ROW
+  EXECUTE PROCEDURE passwordchange();
+ 
+UPDATE CredentialsSignIn SET UserPassword='keyboardsrule88' WHERE username='guitarguy54';
+
+select * from CredentialsSignIn;
+
