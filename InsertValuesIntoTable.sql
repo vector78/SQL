@@ -50,9 +50,6 @@ INSERT INTO Customers values
     ('9054', 'thumbthebase55','09:37:38','pikachu89','1054'),
     ('8912', 'helloitskevin33','09:10:00','greengrass345','7766');
    
-
-   
-   
 INSERT INTO Store VALUES
 ('1', '344-566-2345', 'wangbangsweetmusicthang1@yahoo.com','Portland, Oregon'),
 ('2', '344-788-4567', 'wangbangsweetmusicthang2@yahoo.com','Salem, Oregon'),
@@ -79,22 +76,58 @@ INSERT INTO Transactions VALUES
 ('354', 453.22, 'Paypal', '234WWEEY','1065','9944R');
 
 INSERT INTO Product VALUES
-('433', 45.00, 'Guitar',1),
-('233', 240.56, 'Wooden Ocarina',1),
-('7533', 3400.00, 'Upright Bass',1),
-('10054', 545.00, 'Keyboard',2),
-('9008', 7800.00, 'Grand Piano',9),
-('2446', 400.55, 'Guitar',7),
-('88776', 456.99, 'Synthesizer',4),
-('5443', 125.99,'Electric Bass',4),
-('9887', 500.34, 'Guitar',6),
-('2334', 35.00, 'Guitar', 4);
+('433', 45.00, 'TG Guitar','1'),
+('233', 240.56, 'Wooden Ocarina','1'),
+('7533', 3400.55, 'Wooden Upright Bass','1'),
+('10054', 545.89, 'LOP Keyboard','2'),
+('9008', 7800.96, 'Grand Piano','9'),
+('2446', 400.55, 'Electric Guitar','7'),
+('88776', 456.99, 'KY Synthesizer','4'),
+('5443', 125.99,'Electric Bass','4'),
+('9887', 500.34, 'Guitar','6'),
+('2334', 46.45, 'Ceramic Ocarina', '4'),
+('2332', 1500.52, 'Steel Upright Bass', '1'),
+('2123', 560.19, 'Wooden LOTR Ocarina', '6'),
+('67543', 9050.23, 'Marble Upright Bass', '3'),
+('90345', 10000.50, 'Lee Rocker Upright', '4'),
+('13426', 5645.33, '78 Upright Rocker', '1'),
+('32765', 6500.43, 'BlackWindow Upright', '2'),
+('86432', 4500.33, 'WhiteFang Upright', '3'),
+('34567', 6786.21, 'Ditto Rocker', '10'),
+('98436', 9800.09, 'Reverend Horton Heater 78', '1'),
+('78433', 9020.10, 'Whitey Morgan 34 Slapper', '1'),
+('5643', 246.26, 'Ocarina of Time', '2'),
+('8754', 456.78, 'FairyTale Ocarina', '4'),
+('2345', 967.45, 'Melting Heart Ocarina', '8'),
+('87645', 344.48, 'Double Octave Ocarina', '3'),
+('87432', 233.99, 'Miss Sunshine Ocarina', '7'),
+('89765', 986.75, 'Heart Of Gold Ocarina', '7'),
+('1239', 78.96, 'Deep Forest Ocarina', '9');
 
 INSERT INTO UprightBass VALUES
-('7533', '4 String Upright Bass Rockabilly', 'Epiphone');
+('7533', '4 String Upright Bass Rockabilly', 'Epiphone'),
+('2332', '4 Steel String Bass with Case', 'StringMaster'),
+('67543', 'Marble Upright Bass with Stand', 'Yahama'),
+('90345', '3/4 Upright Bass with Case', 'Epiphone'),
+('13426', '4/4 Upright Slap Bass', 'Yahama'),
+('32765', '3/4 Upright Bass with Pickup Included', 'RockabillyHeat'),
+('86432', 'White fret board with steel strings bass', 'Epiphone'),
+('34567', 'Lee Rockers favorite Rockabilly bass.', 'Yahama'),
+('98436', 'Famous bass played by Jimbo from Reverend Horton Heat', 'StringMaster'),
+('78433', 'Whitey Morgan 34 Slapper', 'StringMaster');
 
 INSERT INTO Ocarina VALUES
-('233', 'Double Octave Wooden Ocarina', 'WindMasters');
+('233', 'Double Octave Wooden Ocarina 12 hole', 'WindMasters'),
+('2334', 'Blue ceramic 16 hole', 'OctaIndustries'),
+('2123', 'Wooden handmade 12 hole', 'DannyAndDanny INC.'),
+('5643', 'Zelda Ocarina of Time Ocarina', 'OctaIndustries'),
+('8754', 'Woodelf mysterous ocarina 12 hole', 'DannyAndDanny INC.'),
+('2345', 'Red heart shaped ocarina 12 hole', 'WindMasters'),
+('87645', 'Double C octave ocarina 24 hole', 'OctaIndustries'),
+('87432', 'Bright yellow ocarina 12 hole', 'DannyAndDanny INC.'),
+('89765','Red painted ocarina from Iceland 12 hole', 'WindMasters'),
+('1239', 'Deep green colored ocarina 12 hole', 'OctaIndustries');
+
 
 INSERT INTO  RefundedTransactions VALUES
 ('156', '600.78','Broken Neck','1056','1'),

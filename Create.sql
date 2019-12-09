@@ -60,14 +60,14 @@ CREATE TABLE Product (
 CREATE TABLE UprightBass (
    ProductID varchar(100),
    FOREIGN key (ProductID) references Product(ProductID),
-   Description varchar(100),
+   Description varchar(500),
    Manufacturer varchar(100)
    );
 
 CREATE TABLE Ocarina (
    ProductID varchar(100),
    FOREIGN key (ProductID) references Product(ProductID),
-   Description varchar(100),
+   Description varchar(500),
    Manufacturer varchar(100)
    );
 
@@ -123,11 +123,11 @@ CREATE TABLE SalaryHistory (
    AccountID varchar(100) NOT NULL PRIMARY KEY,
    EmpSalary int CONSTRAINT Salary CHECK (EmpSalary  > 0),
    TimeChanged TIMESTAMP(6) NOT NULL
-)
+);
 
 CREATE TABLE CustomerAudits (
    CustomerID varchar(100) NOT NULL PRIMARY KEY,
    LastName VARCHAR(40) NOT NULL,
    TimeChanged TIMESTAMP(6) NOT NULL
-)
+);
 
