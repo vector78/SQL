@@ -55,7 +55,7 @@ INSERT INTO Store VALUES
 ('2', '344-788-4567', 'wangbangsweetmusicthang2@yahoo.com','Salem, Oregon'),
 ('3', '344-733-4511', 'wangbangsweetmusicthang3@yahoo.com','Medford, Oregon'),
 ('4', '344-678-9876', 'wangbangsweetmusicthang4@yahoo.com','Bend, Oregon'),
-('5','344-233-4567', 'wangbangsweetmusicthang5@yahoo.com','Portland, Oregon'),
+('5','344-233-4567', 'wangbangsweetmusicthang5@yahoo.com','Oregon'),
 ('6', '344-677-9854', 'wangbangsweetmusicthang6@yahoo.com','Portland, Oregon'),
 ('7', '344-567-5643', 'wangbangsweetmusicthang7@yahoo.com','Portland, Oregon'),
 ('8', '344-898-3456','wangbangsweetmusicthang8@yahoo.com','Salem, Oregon'),

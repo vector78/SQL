@@ -55,15 +55,16 @@ WHERE AccountID = '7843A';
 select * from SalaryHistory;
  
 
-CREATE PROCEDURE InsertMusicTable(ProductID varchar(100),Price float,Name varchar(100),StoreID varchar(100))
+CREATE PROCEDURE InsertTable(_ProductID varchar(100),_Price float,_Name varchar(100),_StoreID varchar(100))
 LANGUAGE SQL
 AS $BODY$
     INSERT INTO Product(ProductID, Price, Name, storeID)
-    VALUES(ProductID, Price,Name,StoreID);   
+    VALUES(_ProductID, _Price,_Name,_StoreID);   
 $BODY$;
 
-CALL InsertMusicTable('78421',86.78,'Ocarina','2');
+CALL InsertTable('77689A',86.78,'Ocarina','1');
 
+select * from product;
 CREATE FUNCTION passwordchange() RETURNS TRIGGER
     LANGUAGE plpgsql
     AS $$
