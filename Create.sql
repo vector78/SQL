@@ -2,8 +2,8 @@
 
 --DROP SCHEMA music_shop2 CASCADE;
 --CREATE SCHEMA music_shop2;
-
-set schema 'music_shop2';
+--
+--set schema 'music_shop2';
 
 CREATE TABLE Courier (
    CourierID varchar(100) NOT NULL PRIMARY KEY,
@@ -27,13 +27,6 @@ CREATE TABLE Customers (
    Email varchar(100)
   );
  
-CREATE TABLE CustomerAudits (
-   CustomerID varchar(100) NOT NULL PRIMARY KEY,
-   LastName VARCHAR(40) NOT NULL,
-   TimeChanged TIMESTAMP(6) NOT NULL
-)
-
-  
 
  CREATE TABLE CredentialsSignIn (
    LogID varchar(100) NOT NULL PRIMARY KEY,
@@ -79,12 +72,15 @@ CREATE TABLE Ocarina (
    );
 
   
+
 CREATE TABLE RefundedTransactions (
    RefundID varchar(100) NOT NULL PRIMARY KEY,
    RefundAmount float CONSTRAINT Refunded CHECK (RefundAmount  > 0),
    RefundReason varchar(100),
    CustomerID varchar(100),
-   FOREIGN key (CustomerID) references Customers(CustomerID)
+   StoreID varchar(100),
+   FOREIGN key (CustomerID) references Customers(CustomerID),
+   FOREIGN key (StoreID) references Store(StoreID)
    );
 
 CREATE TABLE CustomerAddressInfo (
@@ -128,3 +124,10 @@ CREATE TABLE SalaryHistory (
    EmpSalary int CONSTRAINT Salary CHECK (EmpSalary  > 0),
    TimeChanged TIMESTAMP(6) NOT NULL
 )
+
+CREATE TABLE CustomerAudits (
+   CustomerID varchar(100) NOT NULL PRIMARY KEY,
+   LastName VARCHAR(40) NOT NULL,
+   TimeChanged TIMESTAMP(6) NOT NULL
+)
+

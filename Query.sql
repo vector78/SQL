@@ -6,6 +6,7 @@ select * from Store;
 
 select * from Customers;
 
+select * from CredentialsSignIn;
 select * from Transactions;
 
 select * from Product;

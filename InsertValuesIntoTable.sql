@@ -97,14 +97,14 @@ INSERT INTO Ocarina VALUES
 ('233', 'Double Octave Wooden Ocarina', 'WindMasters');
 
 INSERT INTO  RefundedTransactions VALUES
-('156', '600.78','Broken Neck','1056'),
-('677', '453.22','Dented Head','1057'),
-('988', '99.23','Broken Strings','1064'),
-('432', '100.45','Chipped Wood Around Frets','1054'),
-('234', '90.67','Product not of good quality','1977'),
-('987', '34.56','Missing tuning pegs','4322'),
-('098', '23.45','Broken fret boards','5533'),
-('100','34.56','Wrong Rosin','1065');
+('156', '600.78','Broken Neck','1056','1'),
+('677', '453.22','Dented Head','1057','2'),
+('988', '99.23','Broken Strings','1064','1'),
+('432', '100.45','Chipped Wood Around Frets','1054','1'),
+('234', '90.67','Product not of good quality','1977','3'),
+('987', '34.56','Missing tuning pegs','4322','4'),
+('098', '23.45','Broken fret boards','5533','1'),
+('100','34.56','Wrong Rosin','1065','1');
 
 
 
