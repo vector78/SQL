@@ -99,11 +99,17 @@ CREATE INDEX
     passwordCredentials
 ON password(CustomerID);
 
-Create View RefundStore as
+Create View RefundStoreInfo as
 select a.FirstName, a.LastName, b.RefundReason,c.Location
 from Customers as a
 left join RefundedTransactions as b
 on a.CUSTOMERID = b.CUSTOMERID
 left join Store as c
-on a.CUSTOMERID = c.CUSTOMERID
-where b.RefundReason is not null; 
+on b.STOREID = c.STOREID
+where b.refundreason is not null;
+
+select * from refundStoreInfo;
+
+CREATE INDEX 
+    CustomerIDFind
+ON Customers(CustomerID);
