@@ -2,6 +2,7 @@ set schema 'music_shop2';
 
 --TO DO: NEED TO GET RID OF HARD CODED IDS AND SERIALIZE
 --THINK OF FRONT END
+--PYTHON OR C#?
 
 INSERT INTO  Courier (CourierName, DriverFirstName, DriverLastName, DriverPhoneNumber)
 ('Fed-Ex','Doug', 'Jones', '455-678-9867'),
