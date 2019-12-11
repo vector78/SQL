@@ -1,5 +1,7 @@
 set schema 'music_shop2';
 
+--Just a shit ton of select statements.
+
 select * from Courier;
 
 select * from Store;
@@ -19,12 +21,12 @@ select * from refundedtransactions;
 
 
 
-select * from customeraddressinfo
+select * from customeraddressinfo;
 
 
 
-select * from creditcardinfo
+select * from creditcardinfo;
 
-select * from employees
+select * from employees;
 
-select * from salary
+select * from salary;
