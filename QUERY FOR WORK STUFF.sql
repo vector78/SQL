@@ -1,4 +1,4 @@
---@@@@@@@@@@@@ all followups that should exist (for all patients) @@@@@@@@@@@
+--@@@@@@@@@@@ all followups that should exist (for all patients) @@@@@@@@@@
 	WITH
 	CensorDates AS
 	( --Select Patient, joined to each form that can produce a censor date -- get minimum
